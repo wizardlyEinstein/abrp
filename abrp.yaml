@@ -1,0 +1,35 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: abrp 
+  labels:
+    app.kubernetes.io/name: abrp 
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: abrp 
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: abrp 
+    spec:
+      containers:
+        - name: abrp 
+          image: fetzu/teslamate-abrp
+          env:
+            - name: CAR_NUMBER 
+              value: "1" 
+            - name: MQTT_SERVER 
+              value: mosquitto-mqtt.mosquitto.svc.custer.local
+            - name: USER_TOKEN 
+              valueFrom:
+                secretKeyRef:
+                  name: secrets 
+                  key: USER_TOKEN 
+          imagePullPolicy: IfNotPresent
+

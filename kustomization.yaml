@@ -1,0 +1,12 @@
+images:
+- name: fetzu/teslamate-abrp 
+  newName: fetzu/teslamate-abrp@sha256
+  newTag: e0dcdd30bca185941dad17388f487b6d287f70a015708280072228370089984b 
+
+namespace: abrp 
+
+resources:
+- abrp.yaml 
+
+generators:
+- secrets.yaml
