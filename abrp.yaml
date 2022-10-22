@@ -25,7 +25,7 @@ spec:
             - name: CAR_NUMBER 
               value: "1" 
             - name: MQTT_SERVER 
-              value: 192.168.1.50 
+              value: mosquitto-mqtt.mosquitto.svc.cluster.local 
             - name: USER_TOKEN 
               valueFrom:
                 secretKeyRef:
