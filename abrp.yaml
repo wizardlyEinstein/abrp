@@ -18,6 +18,9 @@ spec:
       labels:
         app.kubernetes.io/name: abrp 
     spec:
+      securityContext:
+        runAsUser: 1000 
+        runAsGroup: 1000 
       containers:
         - name: abrp 
           image: fetzu/teslamate-abrp
