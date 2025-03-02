@@ -1,7 +1,7 @@
 images:
 - name: fetzu/teslamate-abrp 
   newName: fetzu/teslamate-abrp@sha256
-  newTag: e0dcdd30bca185941dad17388f487b6d287f70a015708280072228370089984b 
+  newTag: 965a60acfd3faefbdf559e03be1802c97e21c367269a111b3e774a68a9821b7b
 
 namespace: abrp 
 
